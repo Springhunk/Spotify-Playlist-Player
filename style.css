@@ -1,0 +1,85 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-family: "Roboto";
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: #F4F4F8;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 5vh;
+    height: 100%;
+    width: 100%;
+}
+
+#bar {
+    width: 30vw;
+    padding: 5px;
+    font-size: 1.75em;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.player {
+    font-size: 1.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 1vh;
+    color: #3D3E3E;
+}
+
+.song {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 3vh;
+}
+
+#album-cover {
+    border-radius: 10px;
+}
+
+.playback {
+    width: 25vw;
+    text-align: center;
+    padding: 10px;
+}
+
+.playback::after {
+    content: " ";
+    display: block;
+    border-top: 3px solid black;
+}
+
+.controls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    column-gap: 3vw;
+    font-size: 1.5em;
+}
+
+.controls button {
+    font-size: 1em;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+button:hover {
+    cursor: pointer;
+}
