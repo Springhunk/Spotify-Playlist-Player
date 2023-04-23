@@ -1,10 +1,9 @@
-console.log("PLS");
 const playlistBar = document.getElementById("bar");
 
-playlistBar.addEventListener("keyup", (e) => {
-    e.preventDefault();
-
-    if (e.key === "Enter") {
+playlistBar.addEventListener("keypress", (e) => {
+    if (e.key === "Enter" && playlistBar.value.length > 0) {
+        e.preventDefault();
+        
         const postData = async () => {
             const request = await fetch("http://localhost:8080/playlist", {
                 method: "POST",
@@ -15,6 +14,7 @@ playlistBar.addEventListener("keyup", (e) => {
                     playlistLink: playlistBar.value
                 })
             });
+            playlistBar.value = "";
         };
 
         postData();
